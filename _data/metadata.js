@@ -6,6 +6,6 @@ export default {
 	author: {
 		name: "Ignacio Pickering",
 		email: "ign.pickering@gmail.com",
-		url: "https://IgnacioJPickering.github.io/about",
+		url: "https://IgnacioJPickering.github.io/about/",
 	}
 }
