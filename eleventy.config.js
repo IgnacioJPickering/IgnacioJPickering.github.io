@@ -20,15 +20,15 @@ export default async function(eleventyConfig) {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
-	  const markdownLibrary = markdownIt({ // this is setting up my library instance of markdown-it
-	  	html: true, // these are rules for markdown it. see the full list and meanings on https://github.com/markdown-it/markdown-it#init-with-presets-and-options
-	  	linkify: true,
-	  	breaks: false,
-	  	typographer: true
-	  }).use(markdownItKatex.default, katexOptions); // this is me adding markdownItKatex as a plugin for markdown-it
-	  eleventyConfig.setLibrary("md", markdownLibrary); // now i set my library for the "md" file type to my custom config of markdown-it i just made
 	});
 
+	const markdownLibrary = markdownIt({ // this is setting up my library instance of markdown-it
+		html: true, // these are rules for markdown it. see the full list and meanings on https://github.com/markdown-it/markdown-it#init-with-presets-and-options
+		linkify: true,
+		breaks: false,
+		typographer: true
+	}).use(markdownItKatex.default, katexOptions); // this is me adding markdownItKatex as a plugin for markdown-it
+	eleventyConfig.setLibrary("md", markdownLibrary); // now i set my library for the "md" file type to my custom config of markdown-it i just made
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig

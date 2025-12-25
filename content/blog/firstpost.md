@@ -26,7 +26,7 @@ logarithm of the number of possible states in a system. Suppose you can break a 
 $V$ apart into indivisible subsystems, $v$. In this case the Boltzmann entropy is "just"
 the size of the system (in terms of these subsystems). This is easy to see, since $W =
 v^N$ where $N$ is the size of the system, and since $S_{B} = N \ln v$, the Boltzmann
-entropy is, up to a constant, equal to $N$, so it just measures how large the system is.
+entropy is, up to a constant, equal to \(N\), so it just measures how large the system is.
 The easiest example of this is when the system is a number with a given length, the
 entropy is then "just" the number of digits.
 
