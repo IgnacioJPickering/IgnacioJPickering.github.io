@@ -4,6 +4,7 @@ description: Does entropy do much more than measuring the size of physical syste
 date: 2025-12-24
 tags: physics entropy
 ---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 
 I'll start with some ramblings on entropy, which is always an interesting topic for me
 to think about.
