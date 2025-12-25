@@ -2,7 +2,7 @@
 title: Entropy and the size of stuff
 description: Does entropy do much more than measuring the size of physical systems?
 date: 2025-12-24
-tags: physics entropy
+tags: entropy
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 
