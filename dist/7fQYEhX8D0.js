@@ -229,3 +229,13 @@ class HeadingAnchors extends HTMLElement {
 HeadingAnchors.register();
 
 export { HeadingAnchors }
+document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // delimiters for inline and display math
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+          ]
+        });
+      });

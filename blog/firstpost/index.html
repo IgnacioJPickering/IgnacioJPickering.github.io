@@ -6,6 +6,7 @@
 		<title>Entropy and the size of stuff</title>
 		<meta name="description" content="Does entropy do much more than measuring the size of physical systems?">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Sketches in silico">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
 		
 		
 		
@@ -478,6 +479,11 @@ pre[class*="language-diff-"] {
 		
 	</head>
 	<body>
+    <!-- KaTeX JS (optional if using auto-render) -->
+    <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+
+    
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
@@ -502,38 +508,36 @@ pre[class*="language-diff-"] {
 
 <ul class="post-metadata">
 	<li><time datetime="2025-12-24">24 December 2025</time></li>
-	<li><a href="/tags/physics-entropy/" class="post-tag">physics entropy</a></li>
+	<li><a href="/tags/entropy/" class="post-tag">entropy</a></li>
 </ul>
 
-<p>I'll start with some ramblings on entropy, which is always an interesting topic for me
+<p>I’ll start with some ramblings on entropy, which is always an interesting topic for me
 to think about.</p>
 <p>Entropy, to me, is a strange beast. When people describe it they use words that are
 closer to the realm of pseudoscience than what they use for many other physical
-quantities: &quot;disorder&quot;, &quot;chaos&quot;, &quot;information&quot;, etc. Even when trying to make statements
-as precise as possible, these words creep into definitions. I can't shake the feeling
+quantities: “disorder”, “chaos”, “information”, etc. Even when trying to make statements
+as precise as possible, these words creep into definitions. I can’t shake the feeling
 that there is something fishy about it.</p>
 <p>Still, it is undeniably super useful in the physical sciences, and it has been super
 effective in statistics and machine learning.</p>
-<p>There are different quantities that people associate with the name &quot;entropy&quot;. Most of
+<p>There are different quantities that people associate with the name “entropy”. Most of
 them are related enough that they can be lumped together into two main expressions:
-the &quot;Boltzmann&quot; entropy and the &quot;Gibbs / Shannon&quot; entropy.</p>
+the “Boltzmann” entropy and the “Gibbs / Shannon” entropy.</p>
 <p>Boltzmann entropy is clearly the easiest to understand and reason about. It is the
 logarithm of the number of possible states in a system. Suppose you can break a system
-$V$ apart into indivisible subsystems, $v$. In this case the Boltzmann entropy is &quot;just&quot;
-the size of the system (in terms of these subsystems). This is easy to see, since $W =
-v^N$ where $N$ is the size of the system, and since $S_{B} = N \ln v$, the Boltzmann
-entropy is, up to a constant, equal to $N$, so it just measures how large the system is.
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span> apart into indivisible subsystems, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span>. In this case the Boltzmann entropy is “just”
+the size of the system (in terms of these subsystems). This is easy to see, since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><msup><mi>v</mi><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">W =
+v^N</annotation></semantics></math></span> where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span> is the size of the system, and since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>B</mi></msub><mo>=</mo><mi>N</mi><mi>ln</mi><mo>⁡</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">S_{B} = N \ln v</annotation></semantics></math></span>, the Boltzmann
+entropy is, up to a constant, equal to (N), so it just measures how large the system is.
 The easiest example of this is when the system is a number with a given length, the
-entropy is then &quot;just&quot; the number of digits.</p>
+entropy is then “just” the number of digits.</p>
 <p>Although this definition and interpretation is pretty reasonable, its not satisfactory
-to me. Logarithms are kind of weird, and I don't think I can make total sense of them
+to me. Logarithms are kind of weird, and I don’t think I can make total sense of them
 intuitively. If anything, entropy is one of the ways in which logarithms can be made to
-make the most sense, or have the most &quot;contact&quot; with something physical (measuring size)
+make the most sense, or have the most “contact” with something physical (measuring size)
 to the point where I wonder if the flow of understanding should be the other way around,
 from entropy to logarithms.</p>
 
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/fourthpost/">This is my fourth post</a></li>
-</ul>
 
 			</heading-anchors>
 		</main>
@@ -544,7 +548,7 @@ from entropy to logarithms.</p>
 			</p>
 		</footer>
 
-		<!-- This page `/blog/firstpost/` was built on 2025-12-25T00:08:16.114Z -->
-		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+		<!-- This page `/blog/firstpost/` was built on 2025-12-25T00:53:37.162Z -->
+		<script type="module" src="/dist/7fQYEhX8D0.js"></script>
 	</body>
 </html>
