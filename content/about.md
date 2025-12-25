@@ -6,4 +6,5 @@ const eleventyNavigation = {
 ---
 # About
 
-I am a person that writes stuff.
+Postdoctoral researcher @ the University of Florida with Prof. Miranda-Quintana.
+ML + Chem. Rock climber, cat lover.
