@@ -5,9 +5,9 @@ import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
-
-const markdownItKatex = require("@vscode/markdown-it-katex").default; //importing markdown-it-katex, the .default is required and you will get an error without it
-const markdownIt = require("markdown-it");
+import markdownItKatex from "@vscode/markdown-it-katex"; //importing markdown-it-katex, the .default is required and you will get an error without it
+import markdownIt from "markdown-it";
+const katexOptions = {output: 'mathml'};
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -20,6 +20,13 @@ export default async function(eleventyConfig) {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
+	  const markdownLibrary = markdownIt({ // this is setting up my library instance of markdown-it
+	  	html: true, // these are rules for markdown it. see the full list and meanings on https://github.com/markdown-it/markdown-it#init-with-presets-and-options
+	  	linkify: true,
+	  	breaks: false,
+	  	typographer: true
+	  }).use(markdownItKatex.default, katexOptions); // this is me adding markdownItKatex as a plugin for markdown-it
+	  eleventyConfig.setLibrary("md", markdownLibrary); // now i set my library for the "md" file type to my custom config of markdown-it i just made
 	});
 
 	// Copy the contents of the `public` folder to the output folder
@@ -168,9 +175,4 @@ export const config = {
 	// folder name and does **not** affect where things go in the output folder.
 
 	// pathPrefix: "/IgnacioJPickering.github.io",
-	const md = markdownIt({ // this is setting up my library instance of markdown-it
-		html: true, // these are rules for markdown it. see the full list and meanings on https://github.com/markdown-it/markdown-it#init-with-presets-and-options
-		linkify: true,
-  }).use(markdownItKatex); // this is me adding markdownItKatex as a plugin for markdown-it
-  eleventyConfig.setLibrary("md", md); // now i set my library for the "md" file type to my custom config of markdown-it i just made
 };
