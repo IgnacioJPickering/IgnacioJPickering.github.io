@@ -523,21 +523,33 @@ that there is something fishy about it.</p>
 effective in statistics and machine learning.</p>
 <p>There are different quantities that people associate with the name “entropy”. Most of
 them are related enough that they can be lumped together into two main expressions:
-the “Boltzmann” entropy and the “Gibbs / Shannon” entropy.</p>
-<p>Boltzmann entropy is clearly the easiest to understand and reason about. It is the
-logarithm of the number of possible states in a system. Suppose you can break a system
-<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span> apart into indivisible subsystems, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span>. In this case the Boltzmann entropy is “just”
-the size of the system (in terms of these subsystems). This is easy to see, since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><msup><mi>v</mi><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">W =
-v^N</annotation></semantics></math></span> where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span> is the size of the system, and since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>B</mi></msub><mo>=</mo><mi>N</mi><mi>ln</mi><mo>⁡</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">S_{B} = N \ln v</annotation></semantics></math></span>, the Boltzmann
-entropy is, up to a constant, equal to (N), so it just measures how large the system is.
-The easiest example of this is when the system is a number with a given length, the
-entropy is then “just” the number of digits.</p>
+the “Boltzmann” entropy and the “Gibbs / Shannon” entropy. Although in thermodynamics
+and statistical mechanics entropy is conventionally given units through the constant
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">k_{B}</annotation></semantics></math></span>, this is arbitrary, and I believe it is conceptually clearer to avoid units
+altogether (use a dimensionless entropy).</p>
+<p>The Boltzmann entropy is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>B</mi></msub><mo>=</mo><mi>ln</mi><mo>⁡</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">S_{B} = \ln W</annotation></semantics></math></span>, where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span> is the number of states a system can
+be in, subject to some constratints. Many times people talk about the number of
+“microstates”, but I think this is a bit misleading, since it makes you think there is
+something special about these states that makes them “micro”, and states that don’t have
+this “micro” quality don’t count somehow, when the truth is that states are just states.
+In its origin, this entropy is clearly tied to physical systems, but there is no reason
+why it couldn’t be applied in other contexts, if it was useful.</p>
+<p>Boltzmann entropy is, for me, the easiest to understand and reason about. Suppose you
+can break a system <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span> apart into indivisible subsystems, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span>. This is something you can
+usually do for systems that are “large enough”, in such a way that the subsystems
+interact “very weakly” (lets say short-range coupling / interactions dominate). In this
+case the Boltzmann entropy is “just” proportional to the size of the system (in terms of
+these subsystems). This is easy to see, since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><msup><mi>v</mi><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">W = v^N</annotation></semantics></math></span> where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span> is the size of the
+system, and since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>B</mi></msub><mo>=</mo><mi>N</mi><mi>ln</mi><mo>⁡</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">S_{B} = N \ln v</annotation></semantics></math></span>, the Boltzmann entropy is, up to a constant, equal
+to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span>, so it measures how large the system is. The easiest example of this is
+when the system is a number with a given length, the entropy is then “just” the number
+of digits.</p>
 <p>Although this definition and interpretation is pretty reasonable, its not satisfactory
 to me. Logarithms are kind of weird, and I don’t think I can make total sense of them
 intuitively. If anything, entropy is one of the ways in which logarithms can be made to
-make the most sense, or have the most “contact” with something physical (measuring size)
-to the point where I wonder if the flow of understanding should be the other way around,
-from entropy to logarithms.</p>
+make sense, or have the most “contact” with something physical (measuring size) to the
+point where I wonder if the flow of understanding should be the other way around, from
+entropy to logarithms.</p>
 
 
 			</heading-anchors>
@@ -549,7 +561,7 @@ from entropy to logarithms.</p>
 			</p>
 		</footer>
 
-		<!-- This page `/blog/firstpost/` was built on 2025-12-25T20:57:56.195Z -->
+		<!-- This page `/blog/firstpost/` was built on 2025-12-26T07:30:44.425Z -->
 		<script type="module" src="/dist/7fQYEhX8D0.js"></script>
 	</body>
 </html>
