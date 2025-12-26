@@ -38,17 +38,27 @@ usually do for systems that are "large enough", in such a way that the subsystem
 interact "very weakly" (lets say short-range coupling / interactions dominate). In this
 case the Boltzmann entropy is "just" proportional to the size of the system (in terms of
 these subsystems). This is easy to see, since $W = v^N$ where $N$ is the size of the
-system, and since $S_{B} = N \ln v$, the Boltzmann entropy is, up to a constant, equal
-to $N$, so it measures how large the system is. The easiest example of this is
-when the system is a number with a given length, the entropy is then "just" the number
-of digits.
+system, and $S_{B} = N \ln v$, which means $S_{B}$ is up to a constant, equal
+to $N$. At first I thought this meant that the entropy just measures "how large the
+system is", but I don't think this is the best way to think about this. If anything,
+$N$ is almost a redundant degree of freedom in extensive quantitites; it doesn't
+give much more information, so the interesting quantity to consider is $S_{B} / N = \ln v$.
+
+An interesting example of this is when the system is just "a number" with a given
+length, the entropy is then the number of digits.
 
 Although this definition and interpretation is pretty reasonable, its not satisfactory
-to me. Logarithms are kind of weird, and I don't think I can make total sense of them
+to me. Logarithms are kind of *weird*, and I don't think I can make total sense of them
 intuitively. If anything, entropy is one of the ways in which logarithms can be made to
 make sense, or have the most "contact" with something physical (measuring size) to the
 point where I wonder if the flow of understanding should be the other way around, from
 entropy to logarithms.
+
+A good interpretation of logarithms in terms of more "elementary" quantities may be:
+
+$$
+\log x = \int_1^x \frac{dx'}{x'}
+$$
 
 Gibbs / Shannon entropy is more opaque. It can be considered a function of a probability
 distribution $\rho$ *or* a function of a random variable (the random variable associated
