@@ -550,6 +550,13 @@ intuitively. If anything, entropy is one of the ways in which logarithms can be 
 make sense, or have the most “contact” with something physical (measuring size) to the
 point where I wonder if the flow of understanding should be the other way around, from
 entropy to logarithms.</p>
+<p>Gibbs / Shannon entropy is more opaque. It can be considered a function of a probability
+distribution <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span> <em>or</em> a function of a random variable (the random variable associated
+with said <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span>). In quantum mechanics, it is a function of an operator (since
+operators take roughly the place of random variables in QM).</p>
+<p>The cleanest definition of the Gibbs / Shannon entropy is for discrete random variables
+(discrete distributions), where it is given by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>G</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>p</mi><mi>i</mi></msub><mi>ln</mi><mo>⁡</mo><mfrac><mn>1</mn><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">S_{G}(p) = \sum_i p_i \ln \frac{1}{p_i}</annotation></semantics></math></span>
+or equivalently, for a random variable <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>G</mi></msub><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><msub><mo>∑</mo><mi>x</mi></msub><mi>p</mi><mo stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo stretchy="false">)</mo><mi>ln</mi><mo>⁡</mo><mi>p</mi><mo stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">S_{G}(X) = -\sum_x p(X=x) \ln p(X=x)</annotation></semantics></math></span>.</p>
 
 
 			</heading-anchors>
@@ -561,7 +568,7 @@ entropy to logarithms.</p>
 			</p>
 		</footer>
 
-		<!-- This page `/blog/firstpost/` was built on 2025-12-26T07:30:44.425Z -->
+		<!-- This page `/blog/firstpost/` was built on 2025-12-26T07:37:57.083Z -->
 		<script type="module" src="/dist/7fQYEhX8D0.js"></script>
 	</body>
 </html>
