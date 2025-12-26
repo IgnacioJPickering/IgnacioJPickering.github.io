@@ -49,3 +49,12 @@ intuitively. If anything, entropy is one of the ways in which logarithms can be 
 make sense, or have the most "contact" with something physical (measuring size) to the
 point where I wonder if the flow of understanding should be the other way around, from
 entropy to logarithms.
+
+Gibbs / Shannon entropy is more opaque. It can be considered a function of a probability
+distribution $\rho$ *or* a function of a random variable (the random variable associated
+with said $\rho$). In quantum mechanics, it is a function of an operator (since
+operators take roughly the place of random variables in QM).
+
+The cleanest definition of the Gibbs / Shannon entropy is for discrete random variables
+(discrete distributions), where it is given by $S_{G}(p) = \sum_i p_i \ln \frac{1}{p_i}$
+or equivalently, for a random variable $S_{G}(X) = -\sum_x p(X=x) \ln p(X=x)$.
